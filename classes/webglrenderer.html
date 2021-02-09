@@ -1,0 +1,727 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>WebglRenderer | flipnote.js</title>
+	<meta name="description" content="A JavaScript library for parsing, converting, and in-browser playback of the proprietary animation formats used by Nintendo's Flipnote Studio and Flipnote Studio 3D apps.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<link rel="stylesheet" href="../assets/css/pages.css">
+	<link rel="stylesheet" href="../assets/css/landing.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">flipnote.js</a>
+				</div>
+				<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="webglrenderer.html">WebglRenderer</a>
+				</li>
+			</ul>
+			<h1>Class WebglRenderer</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main page-reflection">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div>
+				<section class="tsd-panel tsd-comment">
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Animation frame renderer, built around the <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API" class="external">WebGL</a> API</p>
+						</div>
+						<p>Only available in browser contexts</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-hierarchy">
+					<h3>Hierarchy</h3>
+					<ul class="tsd-hierarchy">
+						<li>
+							<span class="target">WebglRenderer</span>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel-group tsd-index-group">
+					<h2>Index</h2>
+					<section class="tsd-panel tsd-index-panel">
+						<div class="tsd-index-content">
+							<section class="tsd-index-section ">
+								<h3>Constructors</h3>
+								<ul class="tsd-index-list">
+									<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="webglrenderer.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								</ul>
+							</section>
+							<section class="tsd-index-section ">
+								<h3>Properties</h3>
+								<ul class="tsd-index-list">
+									<li class="tsd-kind-property tsd-parent-kind-class"><a href="webglrenderer.html#el" class="tsd-kind-icon">el</a></li>
+									<li class="tsd-kind-property tsd-parent-kind-class"><a href="webglrenderer.html#gl" class="tsd-kind-icon">gl</a></li>
+									<li class="tsd-kind-property tsd-parent-kind-class"><a href="webglrenderer.html#height" class="tsd-kind-icon">height</a></li>
+									<li class="tsd-kind-property tsd-parent-kind-class"><a href="webglrenderer.html#screenheight" class="tsd-kind-icon">screen<wbr>Height</a></li>
+									<li class="tsd-kind-property tsd-parent-kind-class"><a href="webglrenderer.html#screenwidth" class="tsd-kind-icon">screen<wbr>Width</a></li>
+									<li class="tsd-kind-property tsd-parent-kind-class"><a href="webglrenderer.html#width" class="tsd-kind-icon">width</a></li>
+								</ul>
+							</section>
+							<section class="tsd-index-section ">
+								<h3>Methods</h3>
+								<ul class="tsd-index-list">
+									<li class="tsd-kind-method tsd-parent-kind-class"><a href="webglrenderer.html#clearframebuffer" class="tsd-kind-icon">clear<wbr>Frame<wbr>Buffer</a></li>
+									<li class="tsd-kind-method tsd-parent-kind-class"><a href="webglrenderer.html#composite" class="tsd-kind-icon">composite</a></li>
+									<li class="tsd-kind-method tsd-parent-kind-class"><a href="webglrenderer.html#destroy" class="tsd-kind-icon">destroy</a></li>
+									<li class="tsd-kind-method tsd-parent-kind-class"><a href="webglrenderer.html#drawpixels" class="tsd-kind-icon">draw<wbr>Pixels</a></li>
+									<li class="tsd-kind-method tsd-parent-kind-class"><a href="webglrenderer.html#init" class="tsd-kind-icon">init</a></li>
+									<li class="tsd-kind-method tsd-parent-kind-class"><a href="webglrenderer.html#iserrorstate" class="tsd-kind-icon">is<wbr>Error<wbr>State</a></li>
+									<li class="tsd-kind-method tsd-parent-kind-class"><a href="webglrenderer.html#islost" class="tsd-kind-icon">is<wbr>Lost</a></li>
+									<li class="tsd-kind-method tsd-parent-kind-class"><a href="webglrenderer.html#setcanvassize" class="tsd-kind-icon">set<wbr>Canvas<wbr>Size</a></li>
+									<li class="tsd-kind-method tsd-parent-kind-class"><a href="webglrenderer.html#setinputsize" class="tsd-kind-icon">set<wbr>Input<wbr>Size</a></li>
+									<li class="tsd-kind-method tsd-parent-kind-class"><a href="webglrenderer.html#setpalette" class="tsd-kind-icon">set<wbr>Palette</a></li>
+								</ul>
+							</section>
+							<section class="tsd-index-section ">
+								<h3>Object literals</h3>
+								<ul class="tsd-index-list">
+									<li class="tsd-kind-object-literal tsd-parent-kind-class tsd-is-static"><a href="webglrenderer.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a></li>
+								</ul>
+							</section>
+						</div>
+					</section>
+				</section>
+				<section class="tsd-panel-group tsd-member-group ">
+					<h2>Constructors</h2>
+					<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+						<a name="constructor" class="tsd-anchor"></a>
+						<h3>constructor</h3>
+						<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+							<li class="tsd-signature tsd-kind-icon">new <wbr>Webgl<wbr>Renderer<span class="tsd-signature-symbol">(</span>el<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLCanvasElement</span>, width<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/webglrendereroptions.html" class="tsd-signature-type">WebglRendererOptions</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="webglrenderer.html" class="tsd-signature-type">WebglRenderer</a></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L83">src/webgl/WebGlCanvas.ts:83</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Creates a new WebGlCanvas instance</p>
+									</div>
+								</div>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>el: <span class="tsd-signature-type">HTMLCanvasElement</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Canvas HTML element to use as a rendering surface</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<h5><span class="tsd-flag ts-flagDefault value">Default value</span> width: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 640</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Canvas width in CSS pixels</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<h5><span class="tsd-flag ts-flagDefault value">Default value</span> height: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 480</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Canvas height in CSS pixels</p>
+												<p>The ratio between <code>width</code> and <code>height</code> should be 3:4 for best results</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/webglrendereroptions.html" class="tsd-signature-type">WebglRendererOptions</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = {}</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <a href="webglrenderer.html" class="tsd-signature-type">WebglRenderer</a></h4>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section class="tsd-panel-group tsd-member-group ">
+					<h2>Properties</h2>
+					<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+						<a name="el" class="tsd-anchor"></a>
+						<h3>el</h3>
+						<div class="tsd-signature tsd-kind-icon">el<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLCanvasElement</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L47">src/webgl/WebGlCanvas.ts:47</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Canvas HTML element being used as a rendering surface</p>
+							</div>
+						</div>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+						<a name="gl" class="tsd-anchor"></a>
+						<h3>gl</h3>
+						<div class="tsd-signature tsd-kind-icon">gl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WebGLRenderingContext</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L49">src/webgl/WebGlCanvas.ts:49</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Rendering context - see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext" class="external">https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext</a></p>
+							</div>
+						</div>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+						<a name="height" class="tsd-anchor"></a>
+						<h3>height</h3>
+						<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L53">src/webgl/WebGlCanvas.ts:53</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>View height (CSS pixels)</p>
+							</div>
+						</div>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+						<a name="screenheight" class="tsd-anchor"></a>
+						<h3>screen<wbr>Height</h3>
+						<div class="tsd-signature tsd-kind-icon">screen<wbr>Height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L63">src/webgl/WebGlCanvas.ts:63</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Backing canvas height (real pixels)
+								Note that this factors in device pixel ratio, so it may not reflect the size of the canvas in CSS pixels</p>
+							</div>
+						</div>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+						<a name="screenwidth" class="tsd-anchor"></a>
+						<h3>screen<wbr>Width</h3>
+						<div class="tsd-signature tsd-kind-icon">screen<wbr>Width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L58">src/webgl/WebGlCanvas.ts:58</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Backing canvas width (real pixels)
+								Note that this factors in device pixel ratio, so it may not reflect the size of the canvas in CSS pixels</p>
+							</div>
+						</div>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+						<a name="width" class="tsd-anchor"></a>
+						<h3>width</h3>
+						<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L51">src/webgl/WebGlCanvas.ts:51</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>View width (CSS pixels)</p>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section class="tsd-panel-group tsd-member-group ">
+					<h2>Methods</h2>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+						<a name="clearframebuffer" class="tsd-anchor"></a>
+						<h3>clear<wbr>Frame<wbr>Buffer</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+							<li class="tsd-signature tsd-kind-icon">clear<wbr>Frame<wbr>Buffer<span class="tsd-signature-symbol">(</span>paperColor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L285">src/webgl/WebGlCanvas.ts:285</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Clear frame buffer</p>
+									</div>
+								</div>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>paperColor: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+						<a name="composite" class="tsd-anchor"></a>
+						<h3>composite</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+							<li class="tsd-signature tsd-kind-icon">composite<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L359">src/webgl/WebGlCanvas.ts:359</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Composites the current frame buffer into the canvas, applying post-processing effects like scaling filters if enabled</p>
+									</div>
+								</div>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+						<a name="destroy" class="tsd-anchor"></a>
+						<h3>destroy</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+							<li class="tsd-signature tsd-kind-icon">destroy<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L413">src/webgl/WebGlCanvas.ts:413</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Frees any resources used by this canvas instance</p>
+									</div>
+								</div>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+						<a name="drawpixels" class="tsd-anchor"></a>
+						<h3>draw<wbr>Pixels</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+							<li class="tsd-signature tsd-kind-icon">draw<wbr>Pixels<span class="tsd-signature-symbol">(</span>pixels<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span>, paletteOffset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L326">src/webgl/WebGlCanvas.ts:326</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Draw pixels to the frame buffer</p>
+									</div>
+									<p>Note: use <a href="webglrenderer.html#composite">composite</a> to draw the frame buffer to the canvas</p>
+								</div>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>pixels: <span class="tsd-signature-type">Uint8Array</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<p>Array of color indices for every pixl</p>
+										</div>
+									</li>
+									<li>
+										<h5>paletteOffset: <span class="tsd-signature-type">number</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<p>Palette offset index for the pixels being drawn</p>
+										</div>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+						<a name="init" class="tsd-anchor"></a>
+						<h3>init</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+							<li class="tsd-signature tsd-kind-icon">init<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L108">src/webgl/WebGlCanvas.ts:108</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+						<a name="iserrorstate" class="tsd-anchor"></a>
+						<h3>is<wbr>Error<wbr>State</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+							<li class="tsd-signature tsd-kind-icon">is<wbr>Error<wbr>State<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L383">src/webgl/WebGlCanvas.ts:383</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Returns true if the webGL context has returned an error</p>
+									</div>
+								</div>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+						<a name="islost" class="tsd-anchor"></a>
+						<h3>is<wbr>Lost</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+							<li class="tsd-signature tsd-kind-icon">is<wbr>Lost<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L393">src/webgl/WebGlCanvas.ts:393</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Only a certain number of WebGL contexts can be added to a single page before the browser will start culling old contexts.
+										This method returns true if it has been culled, false if not</p>
+									</div>
+								</div>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+						<a name="setcanvassize" class="tsd-anchor"></a>
+						<h3>set<wbr>Canvas<wbr>Size</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+							<li class="tsd-signature tsd-kind-icon">set<wbr>Canvas<wbr>Size<span class="tsd-signature-symbol">(</span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L252">src/webgl/WebGlCanvas.ts:252</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Resize the canvas surface</p>
+									</div>
+								</div>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>width: <span class="tsd-signature-type">number</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<p>New canvas width, in CSS pixels</p>
+										</div>
+									</li>
+									<li>
+										<h5>height: <span class="tsd-signature-type">number</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<p>New canvas height, in CSS pixels</p>
+											<p>The ratio between <code>width</code> and <code>height</code> should be 3:4 for best results</p>
+										</div>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+						<a name="setinputsize" class="tsd-anchor"></a>
+						<h3>set<wbr>Input<wbr>Size</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+							<li class="tsd-signature tsd-kind-icon">set<wbr>Input<wbr>Size<span class="tsd-signature-symbol">(</span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L272">src/webgl/WebGlCanvas.ts:272</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Sets the size of the input pixel arrays</p>
+									</div>
+								</div>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>width: <span class="tsd-signature-type">number</span></h5>
+									</li>
+									<li>
+										<h5>height: <span class="tsd-signature-type">number</span></h5>
+										<div class="tsd-comment tsd-typography">
+										</div>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+						<a name="setpalette" class="tsd-anchor"></a>
+						<h3>set<wbr>Palette</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+							<li class="tsd-signature tsd-kind-icon">set<wbr>Palette<span class="tsd-signature-symbol">(</span>colors<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L301">src/webgl/WebGlCanvas.ts:301</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Set the color palette to use for the next <a href="webglrenderer.html#drawpixels">drawPixels</a> call</p>
+									</div>
+								</div>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>colors: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<p>Array of colors as <code>[R, G, B, A]</code></p>
+										</div>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section class="tsd-panel-group tsd-member-group ">
+					<h2>Object literals</h2>
+					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class tsd-is-static">
+						<a name="defaultoptions" class="tsd-anchor"></a>
+						<h3><span class="tsd-flag ts-flagStatic">Static</span> default<wbr>Options</h3>
+						<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L42">src/webgl/WebGlCanvas.ts:42</a></li>
+							</ul>
+						</aside>
+						<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+							<a name="defaultoptions.onlost" class="tsd-anchor"></a>
+							<h3>onlost</h3>
+							<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+								<li class="tsd-signature tsd-kind-icon">onlost<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L43">src/webgl/WebGlCanvas.ts:43</a></li>
+										</ul>
+									</aside>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+								</li>
+							</ul>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+							<a name="defaultoptions.onrestored" class="tsd-anchor"></a>
+							<h3>onrestored</h3>
+							<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+								<li class="tsd-signature tsd-kind-icon">onrestored<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<aside class="tsd-sources">
+										<ul>
+											<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/webgl/WebGlCanvas.ts#L44">src/webgl/WebGlCanvas.ts:44</a></li>
+										</ul>
+									</aside>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+								</li>
+							</ul>
+						</section>
+					</section>
+				</section>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="label pp-nav pp-group">
+						<span>Docs</span>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="../pages/docs/overview.html">Overview</a>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="../pages/docs/get-started.html">Getting <wbr>Started</a>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="../pages/docs/web-components.html">Web <wbr>Components</a>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="../pages/docs/recipes.html">Recipes</a>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="../pages/docs/acknowledgements.html">Acknowledgements</a>
+					</li>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="label pp-nav pp-group">
+						<span>Links</span>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="https://github.com/jaames/flipnote.js">Flipnote.js on GitHub</a>
+						<a href="https://github.com/jaames/flipnote.js/issues">Open an issue</a>
+						<a href="https://twitter.com/rakujira">Contact me on Twitter</a>
+				</li>                </ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
+						<a href="webglrenderer.html" class="tsd-kind-icon">Webgl<wbr>Renderer</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="webglrenderer.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="webglrenderer.html#el" class="tsd-kind-icon">el</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="webglrenderer.html#gl" class="tsd-kind-icon">gl</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="webglrenderer.html#height" class="tsd-kind-icon">height</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="webglrenderer.html#screenheight" class="tsd-kind-icon">screen<wbr>Height</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="webglrenderer.html#screenwidth" class="tsd-kind-icon">screen<wbr>Width</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="webglrenderer.html#width" class="tsd-kind-icon">width</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="webglrenderer.html#clearframebuffer" class="tsd-kind-icon">clear<wbr>Frame<wbr>Buffer</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="webglrenderer.html#composite" class="tsd-kind-icon">composite</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="webglrenderer.html#destroy" class="tsd-kind-icon">destroy</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="webglrenderer.html#drawpixels" class="tsd-kind-icon">draw<wbr>Pixels</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="webglrenderer.html#init" class="tsd-kind-icon">init</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="webglrenderer.html#iserrorstate" class="tsd-kind-icon">is<wbr>Error<wbr>State</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="webglrenderer.html#islost" class="tsd-kind-icon">is<wbr>Lost</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="webglrenderer.html#setcanvassize" class="tsd-kind-icon">set<wbr>Canvas<wbr>Size</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="webglrenderer.html#setinputsize" class="tsd-kind-icon">set<wbr>Input<wbr>Size</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="webglrenderer.html#setpalette" class="tsd-kind-icon">set<wbr>Palette</a>
+							</li>
+							<li class=" tsd-kind-object-literal tsd-parent-kind-class tsd-is-static">
+								<a href="webglrenderer.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<p>
+			Flipnote Studio and Flipnote Studio 3D are copyrights of Nintendo Co., Ltd. This project isn't affiliated with, or endorsed by them in any way.
+		</p>
+	</div>
+</footer>
+<div class="overlay"></div>
+<script src="../assets/js/flipnote.webcomponent.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.json"><' + '/script>');</script>
+</body>
+</html>

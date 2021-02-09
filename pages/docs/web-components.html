@@ -1,0 +1,336 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Web Components | flipnote.js</title>
+	<meta name="description" content="A JavaScript library for parsing, converting, and in-browser playback of the proprietary animation formats used by Nintendo's Flipnote Studio and Flipnote Studio 3D apps.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../assets/css/main.css">
+	<link rel="stylesheet" href="../../assets/css/pages.css">
+	<link rel="stylesheet" href="../../assets/css/landing.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../../assets/js/search.json" data-base="../..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../../index.html" class="title">flipnote.js</a>
+				</div>
+				<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="overview.html">Docs</a>
+				</li>
+				<li>
+					<a href="web-components.html">Web Components</a>
+				</li>
+			</ul>
+			<h1>Web Components</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main page-markdown">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<div>
+					<p>The web component build of Flipnote.js provides a set of custom HTML tags that can be used to easily embed a <a href="#flipnote-player">Flipnote player UI (<code>&lt;flipnote-player&gt;</code>)</a> or <a href="#flipnote-image">Flipnote image (<code>&lt;flipnote-image&gt;</code>)</a> in any webpage. </p>
+					<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+						<h1>Installation</h1>
+					</a>
+					<p>Installing the web component build is very similar to the usual installation steps listed on the <a href="get-started.html">Getting Started</a> page, except we import a different file that has the additional web component code included.</p>
+					<a href="#from-a-cdn-web" id="from-a-cdn-web" style="color: inherit; text-decoration: none;">
+						<h2>From a CDN (web)</h2>
+					</a>
+					<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/npm/flipnote.js@5/dist/flipnote.webcomponent.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+					<a href="#self-host-web" id="self-host-web" style="color: inherit; text-decoration: none;">
+						<h2>Self-host (web)</h2>
+					</a>
+					<p><a href="https://raw.githubusercontent.com/jaames/flipnote.js/master/dist/flipnote.webcomponent.js"><strong>Development version</strong></a><br/></p>
+					<p><a href="https://raw.githubusercontent.com/jaames/flipnote.js/master/dist/flipnote.webcomponent.min.js"><strong>Production version</strong></a><br/></p>
+					<a href="#from-npm-web-via-a-bundler" id="from-npm-web-via-a-bundler" style="color: inherit; text-decoration: none;">
+						<h2>From NPM (web via a bundler)</h2>
+					</a>
+					<pre><code class="language-js"><span class="hljs-comment">// with the require() function:</span>
+<span class="hljs-keyword">const</span> flipnote = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;flipnote.js/dist/flipnote.webcomponent.js&#x27;</span>);
+<span class="hljs-comment">// or with the es6 import syntax:</span>
+<span class="hljs-keyword">import</span> flipnote <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;flipnote.js/dist/flipnote.webcomponent.js&#x27;</span>;</code></pre>
+					<a href="#flipnote-player" id="flipnote-player" style="color: inherit; text-decoration: none;">
+						<h1>flipnote-player</h1>
+					</a>
+					<p>The <code>&lt;flipnote-player&gt;</code> element behaves almost exactly like the standard HTML5 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a> element, except it can play any valid Flipnote Studio .ppm or .kwz animation file directly in the browser. It also provides a cute playback UI, inspired by my <a href="http://flipnote.rakujira.jp/">web-based Flipnote Player</a>.</p>
+					<p>Here&#39;s what it looks like:</p>
+					<div>
+						<flipnote-player src="../../assets/notes/memoA.kwz"></flipnote-player>
+					</div>
+					<a href="#basic-usage" id="basic-usage" style="color: inherit; text-decoration: none;">
+						<h2>Basic usage</h2>
+					</a>
+					<p>After inserting the script into your page, all you need to do is put a <code>&lt;flipnote-player&gt;</code> tag somewhere in your HTML, and give it a <code>src</code> attribute pointing to the URL of a Flipnote Studio .ppm or .kwz file:</p>
+					<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">flipnote-player</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./path/to/some/flipnote.kwz&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">flipnote-player</span>&gt;</span></code></pre>
+					<p>And... that&#39;s it!</p>
+					<a href="#attributes" id="attributes" style="color: inherit; text-decoration: none;">
+						<h2>Attributes</h2>
+					</a>
+					<a href="#src" id="src" style="color: inherit; text-decoration: none;">
+						<h4><code>src</code></h4>
+					</a>
+					<p>The <code>src</code> attribute tells the player what Flipnote it should load, and it should point to the URL of a Flipnote Studio .ppm or .kwz animation file. This attribute be changed at any time to load another Flipnote into the same player.</p>
+					<p>The player can also load Flipnotes from other kinds of sources, such as from JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/API/File"><code>File</code></a> objects. For more information on this, check out the <a href="#javascript-api">JavaScript API</a> section.</p>
+					<a href="#controls" id="controls" style="color: inherit; text-decoration: none;">
+						<h4><code>controls</code></h4>
+					</a>
+					<p>The <code>controls</code> attribute can select between a couple of different UI control layouts.</p>
+					<p>Default:</p>
+					<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">flipnote-player</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./path/to/some/flipnote.ppm&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">flipnote-player</span>&gt;</span></code></pre>
+					<div>
+						<flipnote-player src="../../assets/notes/juntso.ppm"></flipnote-player>
+					</div>
+					<p><code>compact</code>:</p>
+					<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">flipnote-player</span> <span class="hljs-attr">controls</span>=<span class="hljs-string">&quot;compact&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./path/to/some/flipnote.ppm&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">flipnote-player</span>&gt;</span></code></pre>
+					<div>
+						<flipnote-player controls="compact" src="../../assets/notes/mrjohn.ppm"></flipnote-player>
+					</div>
+					<a href="#styling" id="styling" style="color: inherit; text-decoration: none;">
+						<h2>Styling</h2>
+					</a>
+					<p>Some <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS Variables</a> can also be used to style various elements of the player UI. You can override any these variables to provide your own styles to the component via CSS, like so:</p>
+					<pre><code class="language-css"><span class="hljs-selector-tag">flipnote-player</span> {
+  <span class="hljs-attribute">--flipnote-player-font-family</span>: <span class="hljs-string">&#x27;Helvetica&#x27;</span>;
+  <span class="hljs-attribute">--flipnote-player-button-background</span>: red;
+}</code></pre>
+					<a href="#available-css-variables" id="available-css-variables" style="color: inherit; text-decoration: none;">
+						<h3>Available CSS variables</h3>
+					</a>
+					<table>
+						<thead>
+							<tr>
+								<th align="left">CSS variable</th>
+								<th align="left">Default value</th>
+								<th align="left">Use</th>
+							</tr>
+						</thead>
+						<tbody><tr>
+								<td align="left"><code>--flipnote-player-font-family</code></td>
+								<td align="left"><code>sans-serif</code></td>
+								<td align="left">Font to use for any player UI text</td>
+							</tr>
+							<tr>
+								<td align="left"><code>--flipnote-player-controls-background</code></td>
+								<td align="left"><code>none</code></td>
+								<td align="left">Background color for the controls area</td>
+							</tr>
+							<tr>
+								<td align="left"><code>--flipnote-player-button-background</code></td>
+								<td align="left"><code>#FFD3A6</code></td>
+								<td align="left">Background color for any player buttons</td>
+							</tr>
+							<tr>
+								<td align="left"><code>--flipnote-player-button-color</code></td>
+								<td align="left"><code>#F36A2D</code></td>
+								<td align="left">Text and icon color for any player buttons</td>
+							</tr>
+					</tbody></table>
+					<p>This isn&#39;t super fleshed-out, so if you need more styling options for your use-case feel free to <a href="https://github.com/jaames/flipnote.js/issues">open an issue</a> to request something!</p>
+					<a href="#javascript-api" id="javascript-api" style="color: inherit; text-decoration: none;">
+						<h2>JavaScript API</h2>
+					</a>
+					<p>The webcomponent implements nearly all of the <a href="../../classes/player.html">Player</a> API functionality, which can be useful for controling the player via JavaScript. To access this, first we need to give the player element a unique identifier that can be targeted from JavaScript, like an <code>id</code> attribute:</p>
+					<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">flipnote-player</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;player&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./path/to/some/flipnote.kwz&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">flipnote-player</span>&gt;</span></code></pre>
+					<p>Then in JavaScript, we can target the player:</p>
+					<pre><code class="language-js"><span class="hljs-keyword">var</span> player = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;player&#x27;</span>);</code></pre>
+					<p>There&#39;s a lot of functionality exposed here, so here&#39;s some of the highlights:</p>
+					<a href="#load-and-unload-flipnotes" id="load-and-unload-flipnotes" style="color: inherit; text-decoration: none;">
+						<h3>Load and unload Flipnotes</h3>
+					</a>
+					<pre><code class="language-js"><span class="hljs-keyword">var</span> player = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;player&#x27;</span>);
+
+<span class="hljs-comment">// Load a Flipnote from a URL</span>
+player.load(<span class="hljs-string">&#x27;./path/to/some/other/flipnote.ppm&#x27;</span>);
+<span class="hljs-comment">// Unloads the current Flipnote</span>
+player.close();</code></pre>
+					<a href="#playback-control" id="playback-control" style="color: inherit; text-decoration: none;">
+						<h3>Playback control</h3>
+					</a>
+					<pre><code class="language-js"><span class="hljs-keyword">var</span> player = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;player&#x27;</span>);
+
+<span class="hljs-comment">// Begin animation playback</span>
+player.play();
+<span class="hljs-comment">// Pause animation playback</span>
+player.pause();
+<span class="hljs-comment">// Pause if the animation is playing, else play</span>
+player.togglePlay();
+
+<span class="hljs-comment">// Jump to the next animation frame</span>
+player.nextFrame();
+<span class="hljs-comment">// Jump to the previous animation frame</span>
+player.prevFrame();
+<span class="hljs-comment">// Jump to frame 100</span>
+player.setFrame(<span class="hljs-number">100</span>);</code></pre>
+					<a href="#audio-control" id="audio-control" style="color: inherit; text-decoration: none;">
+						<h3>Audio control</h3>
+					</a>
+					<pre><code class="language-js"><span class="hljs-keyword">var</span> player = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;player&#x27;</span>);
+
+<span class="hljs-comment">// Set volume to 100%</span>
+player.setVolume(<span class="hljs-number">1</span>);
+<span class="hljs-comment">// Unmute audio</span>
+player.setMuted(<span class="hljs-literal">false</span>);
+<span class="hljs-comment">// Enable audio qualizer (uses the same EQ settings as Sudomemo)</span>
+player.setAudioEq(<span class="hljs-literal">true</span>);</code></pre>
+					<a href="#events" id="events" style="color: inherit; text-decoration: none;">
+						<h2>Events</h2>
+					</a>
+					<p>The player element also fires regular DOM <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">events</a> to signal when various actions have happened. </p>
+					<p>As mentioned in the <a href="#javascript-api">JavaScript API</a> section, first we need to add a unique identifier to our player element:</p>
+					<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">flipnote-player</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;player&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./path/to/some/flipnote.kwz&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">flipnote-player</span>&gt;</span></code></pre>
+					<p>And then in JavaScript, we can use the standard DOM event listener API to capture player events:</p>
+					<pre><code class="language-js"><span class="hljs-keyword">var</span> player = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;player&#x27;</span>);
+player.addEventListener(<span class="hljs-string">&#x27;play&#x27;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// do something when playback starts</span>
+});</code></pre>
+					<p>A full list of available events can be found on the <a href="../../classes/player.html">Player</a> API page.</p>
+					<a href="#limitations" id="limitations" style="color: inherit; text-decoration: none;">
+						<h2>Limitations</h2>
+					</a>
+					<p>The player uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a> to render the Flipnote&#39;s animation frames, the benefits of which includes faster performance and lower power consumption compared to the HTML5 canvas API. However, one downside of this approach is that browsers have a hidden limit of how many WebGL contexts can appear on a single page. The number varies, but it&#39;s typically around 8 to 12. </p>
+					<p>If this limit is reached, it will cull old rendering contexts before new ones are created, each player uses its own WebGL context, so this means you can only have a limited number of active player elements on a single page. Flipnote.js currently handles this by making the player show an error message if its context has been culled, but that isn&#39;t very good UX. In the future, I intend to automatically fall back to a HTML5 canvas renderer when this happens, although I haven&#39;t got around to implementing that yet. So please make a note of this.</p>
+					<a href="#flipnote-image" id="flipnote-image" style="color: inherit; text-decoration: none;">
+						<h1>flipnote-image</h1>
+					</a>
+					<p>The <code>&lt;flipnote-image&gt;</code> element behaves similarly to the standard HTML <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a> element, except it can display a frame from any valid Flipnote Studio .ppm or .kwz animation file directly in the browser. It&#39;s a lot less taxing on resources than the player element, so you can use it to embed lots of Flipnote frames in the same page if you want.</p>
+					<div>
+						<flipnote-image src="../../assets/notes/memoA.kwz"></flipnote-image>
+					</div>
+					<p>It also works for Flipnote Gallery World comment files (.kwc)</p>
+					<div>
+						<flipnote-image src="../../assets/notes/comment.kwc"></flipnote-image>
+					</div>
+					<p>And even Flipnote Studio 3D&#39;s folder icons (!.ico)</p>
+					<div>
+						<flipnote-image src="../../assets/notes/1.ico"></flipnote-image>
+						<flipnote-image src="../../assets/notes/2.ico"></flipnote-image>
+						<flipnote-image src="../../assets/notes/3.ico"></flipnote-image>
+					</div>
+					<a href="#basic-usage-1" id="basic-usage-1" style="color: inherit; text-decoration: none;">
+						<h2>Basic usage</h2>
+					</a>
+					<p>After inserting the script into your page, all you need to do is put a <code>&lt;flipnote-image&gt;</code> tag somewhere in your HTML, and give it a <code>src</code> attribute pointing to the URL of a Flipnote Studio .ppm or .kwz file:</p>
+					<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">flipnote-image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./path/to/some/flipnote.kwz&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">flipnote-image</span>&gt;</span></code></pre>
+					<a href="#attributes-1" id="attributes-1" style="color: inherit; text-decoration: none;">
+						<h2>Attributes</h2>
+					</a>
+					<a href="#src-1" id="src-1" style="color: inherit; text-decoration: none;">
+						<h4><code>src</code></h4>
+					</a>
+					<p>The <code>src</code> attribute tells the image element what Flipnote it should load, and it should point to the URL of a Flipnote Studio .ppm or .kwz animation file. This attribute be changed at any time to load another Flipnote into the same image.</p>
+					<p>As with the player element, Flipnotes can also be loaded from other kinds of sources, such as from JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/API/File"><code>File</code></a> objects.</p>
+					<a href="#frame" id="frame" style="color: inherit; text-decoration: none;">
+						<h4><code>frame</code></h4>
+					</a>
+					<p>The Flipnote frame to display as an image, this can be:</p>
+					<ul>
+						<li>Any numeric value to specify an exact frame index to show</li>
+						<li><code>&quot;thumb&quot;</code> to use the Flipnote&#39;s thumbnail frame</li>
+						<li><code>&quot;all&quot;</code> to show the entire animation as a non-interactive animated GIF</li>
+					</ul>
+					<a href="#cropped" id="cropped" style="color: inherit; text-decoration: none;">
+						<h4><code>cropped</code></h4>
+					</a>
+					<p>Set this to <code>&quot;true&quot;</code> to automatically crop out the border around the Flipnote frame. </p>
+				</div>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="label pp-nav pp-group">
+						<span>Docs</span>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="overview.html">Overview</a>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="get-started.html">Getting <wbr>Started</a>
+					</li>
+					<li class="current pp-nav pp-page">
+						<a href="web-components.html">Web <wbr>Components</a>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="recipes.html">Recipes</a>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="acknowledgements.html">Acknowledgements</a>
+					</li>
+					<li class="label pp-nav pp-group">
+						<span>API</span>
+					</li>
+					<li class="globals  ">
+						<a href="../../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="label pp-nav pp-group">
+						<span>Links</span>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="https://github.com/jaames/flipnote.js">Flipnote.js on GitHub</a>
+						<a href="https://github.com/jaames/flipnote.js/issues">Open an issue</a>
+						<a href="https://twitter.com/rakujira">Contact me on Twitter</a>
+				</li>                </ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<p>
+			Flipnote Studio and Flipnote Studio 3D are copyrights of Nintendo Co., Ltd. This project isn't affiliated with, or endorsed by them in any way.
+		</p>
+	</div>
+</footer>
+<div class="overlay"></div>
+<script src="../../assets/js/flipnote.webcomponent.min.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../../assets/js/search.json"><' + '/script>');</script>
+</body>
+</html>

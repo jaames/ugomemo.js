@@ -1,0 +1,720 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>GifImage | flipnote.js</title>
+	<meta name="description" content="A JavaScript library for parsing, converting, and in-browser playback of the proprietary animation formats used by Nintendo's Flipnote Studio and Flipnote Studio 3D apps.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<link rel="stylesheet" href="../assets/css/pages.css">
+	<link rel="stylesheet" href="../assets/css/landing.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">flipnote.js</a>
+				</div>
+				<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="gifimage.html">GifImage</a>
+				</li>
+			</ul>
+			<h1>Class GifImage</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main page-reflection">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div>
+				<section class="tsd-panel tsd-comment">
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>GIF image encoder</p>
+						</div>
+						<p>Supports static single-frame GIF export as well as animated GIF</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-hierarchy">
+					<h3>Hierarchy</h3>
+					<ul class="tsd-hierarchy">
+						<li>
+							<a href="encoderbase.html" class="tsd-signature-type">EncoderBase</a>
+							<ul class="tsd-hierarchy">
+								<li>
+									<span class="target">GifImage</span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel-group tsd-index-group">
+					<h2>Index</h2>
+					<section class="tsd-panel tsd-index-panel">
+						<div class="tsd-index-content">
+							<section class="tsd-index-section ">
+								<h3>Constructors</h3>
+								<ul class="tsd-index-list">
+									<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="gifimage.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								</ul>
+							</section>
+							<section class="tsd-index-section ">
+								<h3>Properties</h3>
+								<ul class="tsd-index-list">
+									<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="gifimage.html#dataurl" class="tsd-kind-icon">data<wbr>Url</a></li>
+									<li class="tsd-kind-property tsd-parent-kind-class"><a href="gifimage.html#framecount" class="tsd-kind-icon">frame<wbr>Count</a></li>
+									<li class="tsd-kind-property tsd-parent-kind-class"><a href="gifimage.html#height" class="tsd-kind-icon">height</a></li>
+									<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="gifimage.html#mimetype" class="tsd-kind-icon">mime<wbr>Type</a></li>
+									<li class="tsd-kind-property tsd-parent-kind-class"><a href="gifimage.html#palette" class="tsd-kind-icon">palette</a></li>
+									<li class="tsd-kind-property tsd-parent-kind-class"><a href="gifimage.html#settings" class="tsd-kind-icon">settings</a></li>
+									<li class="tsd-kind-property tsd-parent-kind-class"><a href="gifimage.html#width" class="tsd-kind-icon">width</a></li>
+								</ul>
+							</section>
+							<section class="tsd-index-section ">
+								<h3>Methods</h3>
+								<ul class="tsd-index-list">
+									<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="gifimage.html#getarraybuffer" class="tsd-kind-icon">get<wbr>Array<wbr>Buffer</a></li>
+									<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="gifimage.html#getblob" class="tsd-kind-icon">get<wbr>Blob</a></li>
+									<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="gifimage.html#getbuffer" class="tsd-kind-icon">get<wbr>Buffer</a></li>
+									<li class="tsd-kind-method tsd-parent-kind-class"><a href="gifimage.html#getimage" class="tsd-kind-icon">get<wbr>Image</a></li>
+									<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="gifimage.html#geturl" class="tsd-kind-icon">get<wbr>Url</a></li>
+									<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="gifimage.html#revokeurl" class="tsd-kind-icon">revoke<wbr>Url</a></li>
+									<li class="tsd-kind-method tsd-parent-kind-class"><a href="gifimage.html#writeframe" class="tsd-kind-icon">write<wbr>Frame</a></li>
+									<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="gifimage.html#fromflipnote" class="tsd-kind-icon">from<wbr>Flipnote</a></li>
+									<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="gifimage.html#fromflipnoteframe" class="tsd-kind-icon">from<wbr>Flipnote<wbr>Frame</a></li>
+								</ul>
+							</section>
+							<section class="tsd-index-section ">
+								<h3>Object literals</h3>
+								<ul class="tsd-index-list">
+									<li class="tsd-kind-object-literal tsd-parent-kind-class tsd-is-static"><a href="gifimage.html#defaultsettings" class="tsd-kind-icon">default<wbr>Settings</a></li>
+								</ul>
+							</section>
+						</div>
+					</section>
+				</section>
+				<section class="tsd-panel-group tsd-member-group ">
+					<h2>Constructors</h2>
+					<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+						<a name="constructor" class="tsd-anchor"></a>
+						<h3>constructor</h3>
+						<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+							<li class="tsd-signature tsd-kind-icon">new <wbr>Gif<wbr>Image<span class="tsd-signature-symbol">(</span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, settings<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/gifimagesettings.html" class="tsd-signature-type">GifImageSettings</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="gifimage.html" class="tsd-signature-type">GifImage</a></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/GifImage.ts#L66">src/encoders/GifImage.ts:66</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Create a new GIF image object</p>
+									</div>
+								</div>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>width: <span class="tsd-signature-type">number</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>image width</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<h5>height: <span class="tsd-signature-type">number</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>image height</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<h5><span class="tsd-flag ts-flagDefault value">Default value</span> settings: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/gifimagesettings.html" class="tsd-signature-type">GifImageSettings</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = {}</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>whether the gif should loop, the delay between frames, etc. See {@link GifEncoderSettings}</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <a href="gifimage.html" class="tsd-signature-type">GifImage</a></h4>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section class="tsd-panel-group tsd-member-group ">
+					<h2>Properties</h2>
+					<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+						<a name="dataurl" class="tsd-anchor"></a>
+						<h3>data<wbr>Url</h3>
+						<div class="tsd-signature tsd-kind-icon">data<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = null</span></div>
+						<aside class="tsd-sources">
+							<p>Inherited from <a href="encoderbase.html">EncoderBase</a>.<a href="encoderbase.html#dataurl">dataUrl</a></p>
+							<ul>
+								<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/EncoderBase.ts#L6">src/encoders/EncoderBase.ts:6</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+						<a name="framecount" class="tsd-anchor"></a>
+						<h3>frame<wbr>Count</h3>
+						<div class="tsd-signature tsd-kind-icon">frame<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/GifImage.ts#L63">src/encoders/GifImage.ts:63</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Number of current GIF frames</p>
+							</div>
+						</div>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+						<a name="height" class="tsd-anchor"></a>
+						<h3>height</h3>
+						<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/GifImage.ts#L57">src/encoders/GifImage.ts:57</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Image height</p>
+							</div>
+						</div>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+						<a name="mimetype" class="tsd-anchor"></a>
+						<h3>mime<wbr>Type</h3>
+						<div class="tsd-signature tsd-kind-icon">mime<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;gif/image&quot;</span></div>
+						<aside class="tsd-sources">
+							<p>Overrides <a href="encoderbase.html">EncoderBase</a>.<a href="encoderbase.html#mimetype">mimeType</a></p>
+							<ul>
+								<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/GifImage.ts#L53">src/encoders/GifImage.ts:53</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+						<a name="palette" class="tsd-anchor"></a>
+						<h3>palette</h3>
+						<div class="tsd-signature tsd-kind-icon">palette<span class="tsd-signature-symbol">:</span> <a href="../globals.html#gifpalettecolor" class="tsd-signature-type">GifPaletteColor</a><span class="tsd-signature-symbol">[]</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/GifImage.ts#L59">src/encoders/GifImage.ts:59</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>GIF global RGBA color palette. Max 256 colors, alpha channel is ignored</p>
+							</div>
+						</div>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+						<a name="settings" class="tsd-anchor"></a>
+						<h3>settings</h3>
+						<div class="tsd-signature tsd-kind-icon">settings<span class="tsd-signature-symbol">:</span> <a href="../interfaces/gifimagesettings.html" class="tsd-signature-type">GifImageSettings</a></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/GifImage.ts#L61">src/encoders/GifImage.ts:61</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>GIF image settings, such as whether it should loop, the delay between frames, etc</p>
+							</div>
+						</div>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+						<a name="width" class="tsd-anchor"></a>
+						<h3>width</h3>
+						<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/GifImage.ts#L55">src/encoders/GifImage.ts:55</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Image width</p>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section class="tsd-panel-group tsd-member-group ">
+					<h2>Methods</h2>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<a name="getarraybuffer" class="tsd-anchor"></a>
+						<h3>get<wbr>Array<wbr>Buffer</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+							<li class="tsd-signature tsd-kind-icon">get<wbr>Array<wbr>Buffer<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArrayBufferLike</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<p>Overrides <a href="encoderbase.html">EncoderBase</a>.<a href="encoderbase.html#getarraybuffer">getArrayBuffer</a></p>
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/GifImage.ts#L231">src/encoders/GifImage.ts:231</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Returns the GIF image data as an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer" class="external">ArrayBuffer</a></p>
+									</div>
+								</div>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ArrayBufferLike</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<a name="getblob" class="tsd-anchor"></a>
+						<h3>get<wbr>Blob</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+							<li class="tsd-signature tsd-kind-icon">get<wbr>Blob<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Blob</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<p>Inherited from <a href="encoderbase.html">EncoderBase</a>.<a href="encoderbase.html#getblob">getBlob</a></p>
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/EncoderBase.ts#L26">src/encoders/EncoderBase.ts:26</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Returns the file data as a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" class="external">Blob</a></p>
+									</div>
+								</div>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Blob</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<a name="getbuffer" class="tsd-anchor"></a>
+						<h3>get<wbr>Buffer</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+							<li class="tsd-signature tsd-kind-icon">get<wbr>Buffer<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Buffer</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<p>Inherited from <a href="encoderbase.html">EncoderBase</a>.<a href="encoderbase.html#getbuffer">getBuffer</a></p>
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/EncoderBase.ts#L18">src/encoders/EncoderBase.ts:18</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Returns the file data as a NodeJS <a href="https://nodejs.org/api/buffer.html" class="external">Buffer</a></p>
+									</div>
+									<p>Note: This method does not work outside of NodeJS environments</p>
+								</div>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Buffer</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+						<a name="getimage" class="tsd-anchor"></a>
+						<h3>get<wbr>Image</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+							<li class="tsd-signature tsd-kind-icon">get<wbr>Image<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLImageElement</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/GifImage.ts#L240">src/encoders/GifImage.ts:240</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Returns the GIF image data as an <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/Image" class="external">Image</a> object</p>
+									</div>
+									<p>Note: This method does not work outside of browser environments</p>
+								</div>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">HTMLImageElement</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<a name="geturl" class="tsd-anchor"></a>
+						<h3>get<wbr>Url</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+							<li class="tsd-signature tsd-kind-icon">get<wbr>Url<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<p>Inherited from <a href="encoderbase.html">EncoderBase</a>.<a href="encoderbase.html#geturl">getUrl</a></p>
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/EncoderBase.ts#L38">src/encoders/EncoderBase.ts:38</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Returns the file data as an <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL" class="external">Object URL</a></p>
+									</div>
+									<p>Note: This method does not work outside of browser environments</p>
+								</div>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<a name="revokeurl" class="tsd-anchor"></a>
+						<h3>revoke<wbr>Url</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+							<li class="tsd-signature tsd-kind-icon">revoke<wbr>Url<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<p>Inherited from <a href="encoderbase.html">EncoderBase</a>.<a href="encoderbase.html#revokeurl">revokeUrl</a></p>
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/EncoderBase.ts#L50">src/encoders/EncoderBase.ts:50</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Revokes this file&#39;s <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL" class="external">Object URL</a> if one has been created, use this when the url created with <a href="gifimage.html#geturl">getUrl</a> is no longer needed, to preserve memory.</p>
+									</div>
+									<p>Note: This method does not work outside of browser environments</p>
+								</div>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+						<a name="writeframe" class="tsd-anchor"></a>
+						<h3>write<wbr>Frame</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+							<li class="tsd-signature tsd-kind-icon">write<wbr>Frame<span class="tsd-signature-symbol">(</span>pixels<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/GifImage.ts#L127">src/encoders/GifImage.ts:127</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Add a frame to the GIF image</p>
+									</div>
+								</div>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>pixels: <span class="tsd-signature-type">Uint8Array</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<p>Raw pixels to encode, must be an uncompressed 8bit array of palette indices with a size matching image width * image height</p>
+										</div>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<a name="fromflipnote" class="tsd-anchor"></a>
+						<h3><span class="tsd-flag ts-flagStatic">Static</span> from<wbr>Flipnote</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+							<li class="tsd-signature tsd-kind-icon">from<wbr>Flipnote<span class="tsd-signature-symbol">(</span>flipnote<span class="tsd-signature-symbol">: </span><a href="../globals.html#flipnote" class="tsd-signature-type">Flipnote</a>, settings<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/gifimagesettings.html" class="tsd-signature-type">GifImageSettings</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="gifimage.html" class="tsd-signature-type">GifImage</a></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/GifImage.ts#L90">src/encoders/GifImage.ts:90</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Create an animated GIF image from a Flipnote</p>
+									</div>
+									<p>This will encode the entire animation, so depending on the number of frames it could take a while to return.</p>
+								</div>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>flipnote: <a href="../globals.html#flipnote" class="tsd-signature-type">Flipnote</a></h5>
+										<div class="tsd-comment tsd-typography">
+											<p><a href="../globals.html#flipnote">Flipnote</a> object (<a href="ppmparser.html">PpmParser</a> or <a href="kwzparser.html">KwzParser</a> instance)</p>
+										</div>
+									</li>
+									<li>
+										<h5><span class="tsd-flag ts-flagDefault value">Default value</span> settings: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/gifimagesettings.html" class="tsd-signature-type">GifImageSettings</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = {}</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<p>whether the gif should loop, the delay between frames, etc. See {@link GifEncoderSettings}</p>
+										</div>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <a href="gifimage.html" class="tsd-signature-type">GifImage</a></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<a name="fromflipnoteframe" class="tsd-anchor"></a>
+						<h3><span class="tsd-flag ts-flagStatic">Static</span> from<wbr>Flipnote<wbr>Frame</h3>
+						<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+							<li class="tsd-signature tsd-kind-icon">from<wbr>Flipnote<wbr>Frame<span class="tsd-signature-symbol">(</span>flipnote<span class="tsd-signature-symbol">: </span><a href="../globals.html#flipnote" class="tsd-signature-type">Flipnote</a>, frameIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, settings<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/gifimagesettings.html" class="tsd-signature-type">GifImageSettings</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="gifimage.html" class="tsd-signature-type">GifImage</a></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/GifImage.ts#L111">src/encoders/GifImage.ts:111</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Create an GIF image from a single Flipnote frame</p>
+									</div>
+								</div>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>flipnote: <a href="../globals.html#flipnote" class="tsd-signature-type">Flipnote</a></h5>
+									</li>
+									<li>
+										<h5>frameIndex: <span class="tsd-signature-type">number</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<p>animation frame index to encode</p>
+										</div>
+									</li>
+									<li>
+										<h5><span class="tsd-flag ts-flagDefault value">Default value</span> settings: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/gifimagesettings.html" class="tsd-signature-type">GifImageSettings</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = {}</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<p>whether the gif should loop, the delay between frames, etc. See {@link GifEncoderSettings}</p>
+										</div>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <a href="gifimage.html" class="tsd-signature-type">GifImage</a></h4>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section class="tsd-panel-group tsd-member-group ">
+					<h2>Object literals</h2>
+					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class tsd-is-static">
+						<a name="defaultsettings" class="tsd-anchor"></a>
+						<h3><span class="tsd-flag ts-flagStatic">Static</span> default<wbr>Settings</h3>
+						<div class="tsd-signature tsd-kind-icon">default<wbr>Settings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/GifImage.ts#L46">src/encoders/GifImage.ts:46</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Default GIF encoder settings</p>
+							</div>
+						</div>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultsettings.colordepth" class="tsd-anchor"></a>
+							<h3>color<wbr>Depth</h3>
+							<div class="tsd-signature tsd-kind-icon">color<wbr>Depth<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 8</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/GifImage.ts#L50">src/encoders/GifImage.ts:50</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultsettings.delay" class="tsd-anchor"></a>
+							<h3>delay</h3>
+							<div class="tsd-signature tsd-kind-icon">delay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 100</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/GifImage.ts#L48">src/encoders/GifImage.ts:48</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultsettings.repeat" class="tsd-anchor"></a>
+							<h3>repeat</h3>
+							<div class="tsd-signature tsd-kind-icon">repeat<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/GifImage.ts#L49">src/encoders/GifImage.ts:49</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultsettings.transparentbg" class="tsd-anchor"></a>
+							<h3>transparent<wbr>Bg</h3>
+							<div class="tsd-signature tsd-kind-icon">transparent<wbr>Bg<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> = false</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jaames/flipnote.js/blob/216d9ae/src/encoders/GifImage.ts#L47">src/encoders/GifImage.ts:47</a></li>
+								</ul>
+							</aside>
+						</section>
+					</section>
+				</section>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="label pp-nav pp-group">
+						<span>Docs</span>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="../pages/docs/overview.html">Overview</a>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="../pages/docs/get-started.html">Getting <wbr>Started</a>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="../pages/docs/web-components.html">Web <wbr>Components</a>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="../pages/docs/recipes.html">Recipes</a>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="../pages/docs/acknowledgements.html">Acknowledgements</a>
+					</li>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="label pp-nav pp-group">
+						<span>Links</span>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="https://github.com/jaames/flipnote.js">Flipnote.js on GitHub</a>
+						<a href="https://github.com/jaames/flipnote.js/issues">Open an issue</a>
+						<a href="https://twitter.com/rakujira">Contact me on Twitter</a>
+				</li>                </ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
+						<a href="gifimage.html" class="tsd-kind-icon">Gif<wbr>Image</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="gifimage.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="gifimage.html#dataurl" class="tsd-kind-icon">data<wbr>Url</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="gifimage.html#framecount" class="tsd-kind-icon">frame<wbr>Count</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="gifimage.html#height" class="tsd-kind-icon">height</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="gifimage.html#mimetype" class="tsd-kind-icon">mime<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="gifimage.html#palette" class="tsd-kind-icon">palette</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="gifimage.html#settings" class="tsd-kind-icon">settings</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="gifimage.html#width" class="tsd-kind-icon">width</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="gifimage.html#getarraybuffer" class="tsd-kind-icon">get<wbr>Array<wbr>Buffer</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="gifimage.html#getblob" class="tsd-kind-icon">get<wbr>Blob</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="gifimage.html#getbuffer" class="tsd-kind-icon">get<wbr>Buffer</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="gifimage.html#getimage" class="tsd-kind-icon">get<wbr>Image</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="gifimage.html#geturl" class="tsd-kind-icon">get<wbr>Url</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="gifimage.html#revokeurl" class="tsd-kind-icon">revoke<wbr>Url</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="gifimage.html#writeframe" class="tsd-kind-icon">write<wbr>Frame</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="gifimage.html#fromflipnote" class="tsd-kind-icon">from<wbr>Flipnote</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="gifimage.html#fromflipnoteframe" class="tsd-kind-icon">from<wbr>Flipnote<wbr>Frame</a>
+							</li>
+							<li class=" tsd-kind-object-literal tsd-parent-kind-class tsd-is-static">
+								<a href="gifimage.html#defaultsettings" class="tsd-kind-icon">default<wbr>Settings</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<p>
+			Flipnote Studio and Flipnote Studio 3D are copyrights of Nintendo Co., Ltd. This project isn't affiliated with, or endorsed by them in any way.
+		</p>
+	</div>
+</footer>
+<div class="overlay"></div>
+<script src="../assets/js/flipnote.webcomponent.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.json"><' + '/script>');</script>
+</body>
+</html>

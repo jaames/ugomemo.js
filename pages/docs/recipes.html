@@ -1,0 +1,243 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Recipes | flipnote.js</title>
+	<meta name="description" content="A JavaScript library for parsing, converting, and in-browser playback of the proprietary animation formats used by Nintendo's Flipnote Studio and Flipnote Studio 3D apps.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../assets/css/main.css">
+	<link rel="stylesheet" href="../../assets/css/pages.css">
+	<link rel="stylesheet" href="../../assets/css/landing.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../../assets/js/search.json" data-base="../..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../../index.html" class="title">flipnote.js</a>
+				</div>
+				<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="overview.html">Docs</a>
+				</li>
+				<li>
+					<a href="recipes.html">Recipes</a>
+				</li>
+			</ul>
+			<h1>Recipes</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main page-markdown">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<div>
+					<p>This page provides some basic recipes for achieving common tasks with the flipnote.js API. It assumes you have installed the library via one of the methods listed on the <a href="get-started.html">Getting Started</a> guide, and have very basic working knowledge of HTML and JavaScript.</p>
+					<ul>
+						<li><a href="#embedding-a-flipnote-player">Embedding a Flipnote player</a></li>
+						<li><a href="#opening-a-flipnote">Opening a Flipnote</a></li>
+						<li><a href="#gif-conversion">GIF conversion</a></li>
+						<li><a href="#wav-conversion">WAV conversion</a></li>
+					</ul>
+					<a href="#embedding-a-flipnote-player" id="embedding-a-flipnote-player" style="color: inherit; text-decoration: none;">
+						<h2>Embedding a Flipnote player</h2>
+					</a>
+					<p>The Web Component version of Flipnote.js provides a custom <code>&lt;flipnote-player&gt;</code> HTML tag that can be used to easily embed a Flipnote player UI in any webpage. For more information about this, check out the <a href="web-components.html">Web Components</a> page.</p>
+					<a href="#opening-a-flipnote" id="opening-a-flipnote" style="color: inherit; text-decoration: none;">
+						<h2>Opening a Flipnote</h2>
+					</a>
+					<p>Opening a Flipnote will give you a <a href="../../globals.html#flipnote">Flipnote</a> object that implements the <a href="../../classes/flipnoteparser.html">FlipnoteParser</a> API.</p>
+					<a href="#open-a-flipnote-from-a-url-web-node" id="open-a-flipnote-from-a-url-web-node" style="color: inherit; text-decoration: none;">
+						<h3>Open a Flipnote from a URL (web, node)</h3>
+					</a>
+					<pre><code class="language-js">flipnote.parseSource(<span class="hljs-string">&#x27;http://example.com/example.ppm&#x27;</span>).then(<span class="hljs-function"><span class="hljs-params">note</span> =&gt;</span> {
+  <span class="hljs-comment">// do something with the open note here...</span>
+});</code></pre>
+					<a href="#open-a-flipnote-from-the-filesystem-node" id="open-a-flipnote-from-the-filesystem-node" style="color: inherit; text-decoration: none;">
+						<h3>Open a Flipnote from the filesystem (node)</h3>
+					</a>
+					<pre><code class="language-js"><span class="hljs-keyword">const</span> flipnote = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;flipnote.js&#x27;</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;fs&#x27;</span>).promises;
+
+fs.readFile(<span class="hljs-string">&#x27;./example.ppm&#x27;</span>)
+.then(<span class="hljs-function"><span class="hljs-params">file</span> =&gt;</span> flipnote.parseSource(file))
+.then(<span class="hljs-function"><span class="hljs-params">note</span> =&gt;</span> {
+  <span class="hljs-comment">// do something with the open note here...</span>
+});</code></pre>
+					<a href="#open-a-flipnote-from-file-upload-web" id="open-a-flipnote-from-file-upload-web" style="color: inherit; text-decoration: none;">
+						<h3>Open a Flipnote from file upload (web)</h3>
+					</a>
+					<p>Add a file upload input to your HTML:</p>
+					<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;input&quot;</span>&gt;</span></code></pre>
+					<p>And use this JS to handle it:</p>
+					<pre><code class="language-js"><span class="hljs-keyword">const</span> inputElement = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;input&quot;</span>);
+
+inputElement.addEventListener(<span class="hljs-string">&#x27;change&#x27;</span>, handleFiles, <span class="hljs-literal">false</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleFiles</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> file = <span class="hljs-built_in">this</span>.files[<span class="hljs-number">0</span>];
+  flipnote.parseSource(file).then(<span class="hljs-function"><span class="hljs-params">note</span> =&gt;</span> {
+    <span class="hljs-comment">// do something with the open note here...</span>
+  });
+}</code></pre>
+					<p>See also: <a href="https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a> on MDN.</p>
+					<a href="#gif-conversion" id="gif-conversion" style="color: inherit; text-decoration: none;">
+						<h2>GIF conversion</h2>
+					</a>
+					<p>flipnote.js comes with a built-in GIF exporter, which is the easiest way to convert a single Flipnote frame - or the whole animation sequence - into a standard image format. This section assumes you have already opened your Flipnote as a <a href="../../globals.html#flipnote">Flipnote</a> object called <code>note</code>.</p>
+					<a href="#encode-gif-web-node" id="encode-gif-web-node" style="color: inherit; text-decoration: none;">
+						<h3>Encode GIF (web, node)</h3>
+					</a>
+					<p>The first step of GIF encoding is to create a <a href="../../classes/gifimage.html">GifImage</a> from the Flipnote. This can then be saved in different ways depending on your use-case and environment.</p>
+					<p>To create a <a href="../../classes/gifimage.html">GifImage</a> from a single animation frame:</p>
+					<pre><code class="language-js"><span class="hljs-keyword">const</span> gif = flipnote.GifImage.fromFlipnoteFrame(note, <span class="hljs-number">0</span>);</code></pre>
+					<p>To create a <a href="../../classes/gifimage.html">GifImage</a> from the full animation sequence:</p>
+					<pre><code class="language-js"><span class="hljs-keyword">const</span> gif = flipnote.GifImage.fromFlipnote(note);</code></pre>
+					<a href="#save-gif-web" id="save-gif-web" style="color: inherit; text-decoration: none;">
+						<h3>Save GIF (web)</h3>
+					</a>
+					<p>In browser enviornments, it&#39;s recommended to use the <code>saveAs</code> function from the <a href="https://github.com/eligrey/FileSaver.js/" class="external">FileSaver.js</a> library to trigger an instant download of the GIF:</p>
+					<pre><code class="language-js">saveAs(gif.getBlob(), <span class="hljs-built_in">this</span>.meta.current.filename + <span class="hljs-string">&#x27;.gif&#x27;</span>);</code></pre>
+					<a href="#save-gif-node" id="save-gif-node" style="color: inherit; text-decoration: none;">
+						<h3>Save GIF (node)</h3>
+					</a>
+					<p>In NodeJS we can save the GIF to a file:</p>
+					<pre><code class="language-js"><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;fs&#x27;</span>).promises;
+<span class="hljs-keyword">const</span> flipnote = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;flipnote.js&#x27;</span>);
+
+<span class="hljs-comment">// Open a Flipnote and convert it to a GifImage here...</span>
+
+<span class="hljs-keyword">const</span> buffer = gif.getBuffer();
+fs.writeFile(<span class="hljs-built_in">this</span>.meta.current.filename + <span class="hljs-string">&#x27;.gif&#x27;</span>, buffer);</code></pre>
+					<a href="#wav-conversion" id="wav-conversion" style="color: inherit; text-decoration: none;">
+						<h2>WAV conversion</h2>
+					</a>
+					<p>flipnote.js also comes with a built-in WAV encoder, for converting Flipnote audio tracks into a standard audio format.
+					This section assumes you have already opened your Flipnote as a <a href="../../globals.html#flipnote">Flipnote</a> object called <code>note</code>.</p>
+					<a href="#encode-wav-web-node" id="encode-wav-web-node" style="color: inherit; text-decoration: none;">
+						<h3>Encode WAV (web, node)</h3>
+					</a>
+					<p>The first step of WAV encoding is to create a <a href="../../classes/wavaudio.html">WavAudio</a> from the Flipnote. As with GIF encoding, this can then be saved in different ways depending on your use-case and environment.</p>
+					<p>To create a <a href="../../classes/wavaudio.html">WavAudio</a> from a single audio track:</p>
+					<pre><code class="language-js"><span class="hljs-comment">// 0 = BGM</span>
+<span class="hljs-comment">// 1 = SE1</span>
+<span class="hljs-comment">// 2 = SE2</span>
+<span class="hljs-comment">// 3 = SE3</span>
+<span class="hljs-comment">// 4 = SE4</span>
+<span class="hljs-keyword">const</span> wav = flipnote.WavAudio.fromFlipnoteTrack(note, <span class="hljs-number">0</span>);</code></pre>
+					<p>To create a <a href="../../classes/wavaudio.html">WavAudio</a> from the mixed audio master:</p>
+					<pre><code class="language-js"><span class="hljs-keyword">const</span> wav = flipnote.WavAudio.fromFlipnote(note);</code></pre>
+					<a href="#save-wav-web" id="save-wav-web" style="color: inherit; text-decoration: none;">
+						<h3>Save WAV (web)</h3>
+					</a>
+					<p>In browser enviornments, it&#39;s recommended to use the <code>saveAs</code> function from the <a href="https://github.com/eligrey/FileSaver.js/" class="external">FileSaver.js</a> library to trigger an instant download of the WAV:</p>
+					<pre><code class="language-js">saveAs(wav.getBlob(), <span class="hljs-built_in">this</span>.meta.current.filename + <span class="hljs-string">&#x27;.wav&#x27;</span>);</code></pre>
+					<a href="#save-wav-node" id="save-wav-node" style="color: inherit; text-decoration: none;">
+						<h3>Save WAV (node)</h3>
+					</a>
+					<p>In NodeJS we can save the WAV to a file:</p>
+					<pre><code class="language-js"><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;fs&#x27;</span>).promises;
+<span class="hljs-keyword">const</span> flipnote = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;flipnote.js&#x27;</span>);
+
+<span class="hljs-comment">// Open a Flipnote and convert it to a WavAudio here...</span>
+
+<span class="hljs-keyword">const</span> buffer = wav.getBuffer();
+fs.writeFile(<span class="hljs-built_in">this</span>.meta.current.filename + <span class="hljs-string">&#x27;.wav&#x27;</span>, buffer);</code></pre>
+				</div>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="label pp-nav pp-group">
+						<span>Docs</span>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="overview.html">Overview</a>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="get-started.html">Getting <wbr>Started</a>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="web-components.html">Web <wbr>Components</a>
+					</li>
+					<li class="current pp-nav pp-page">
+						<a href="recipes.html">Recipes</a>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="acknowledgements.html">Acknowledgements</a>
+					</li>
+					<li class="label pp-nav pp-group">
+						<span>API</span>
+					</li>
+					<li class="globals  ">
+						<a href="../../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="label pp-nav pp-group">
+						<span>Links</span>
+					</li>
+					<li class=" pp-nav pp-page">
+						<a href="https://github.com/jaames/flipnote.js">Flipnote.js on GitHub</a>
+						<a href="https://github.com/jaames/flipnote.js/issues">Open an issue</a>
+						<a href="https://twitter.com/rakujira">Contact me on Twitter</a>
+				</li>                </ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<p>
+			Flipnote Studio and Flipnote Studio 3D are copyrights of Nintendo Co., Ltd. This project isn't affiliated with, or endorsed by them in any way.
+		</p>
+	</div>
+</footer>
+<div class="overlay"></div>
+<script src="../../assets/js/flipnote.webcomponent.min.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../../assets/js/search.json"><' + '/script>');</script>
+</body>
+</html>
